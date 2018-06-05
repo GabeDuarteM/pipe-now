@@ -1,0 +1,73 @@
+{
+  "name": "pipe-now",
+  "version": "0.0.0-development",
+  "description": "A pipe function that acts like the pipeline operator proposal.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Gabriel Duarte <gabrielqduarte@gmail.com> (https://www.gabrielduarte.tech/)",
+  "license": "MIT",
+  "homepage": "https://github.com/GabrielDuarteM/pipe-now",
+  "keywords": [
+    "pipe",
+    "now",
+    "pipeline",
+    "operator",
+    "tool",
+    "tools",
+    "util",
+    "utils",
+    "helper",
+    "helpers"
+  ],
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GabrielDuarteM/pipe-now.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GabrielDuarteM/pipe-now/issues"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "start": "yarn build -w",
+    "build": "yarn clean && tsc",
+    "test": "jest",
+    "lint": "tslint --project tsconfig.json",
+    "ci": "yarn lint && yarn test && yarn build",
+    "release": "semantic-release"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.json"
+      }
+    },
+    "testMatch": [
+      "**/*.test.+(ts|tsx|js)"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^23.0.0",
+    "@types/node": "^10.3.1",
+    "jest": "^23.1.0",
+    "prettier": "^1.13.4",
+    "rimraf": "^2.6.2",
+    "semantic-release": "^15.5.0",
+    "ts-jest": "^22.4.6",
+    "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.13.0",
+    "tslint-consistent-codestyle": "^1.13.1",
+    "tslint-plugin-prettier": "^1.3.0",
+    "typescript": "^2.9.1"
+  }
+}
