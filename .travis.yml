@@ -10,6 +10,7 @@ script: yarn ci
 jobs:
   include:
     - stage: semantic-release
+      if: branch = master
       node_js: node
       script: 
         - yarn build
