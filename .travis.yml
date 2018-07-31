@@ -1,7 +1,14 @@
 language: node_js
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
 node_js:
   - node
-script:
-  - yarn ci
-after_success:
-  - yarn release
+  - lts/*
+script: yarn ci
+jobs:
+  include:
+    - stage: semantic-release
+      node_js: node
+      script: yarn release

@@ -1,9 +1,8 @@
 /* tslint:disable no-magic-numbers */
 
-import pipe from "./"
+import pipe from "."
 
 describe("pipe", () => {
-  // describe("deve passar o primeiro argumento passado pro pipe para as funções seguintes e retornar o resultado da ultima função", () => {
   it("should return 16 when the following parameters are passed: (256, Math.sqrt)", () => {
     const initialValue = 256
     const expected = 16
@@ -30,11 +29,12 @@ describe("pipe", () => {
   it("should return 10 when the following parameters are passed: (256, Math.sqrt, Math.sqrt, val => val + 6)", () => {
     const initialValue = 256
     const expected = 10
+    const valueToAdd = 6
     const actual = pipe(
       initialValue,
       Math.sqrt,
       Math.sqrt,
-      value => value + 6,
+      (value: number) => value + valueToAdd,
     )
 
     expect(actual).toBe(expected)
@@ -44,8 +44,8 @@ describe("pipe", () => {
     const initialValue = "glory to the pipes"
     const expected = "GLORY 👌 TO 👌 THE 👌 PIPES"
 
-    const uppercase = val => val.toUpperCase()
-    const topifySpaces = val => val.replace(/ /g, " 👌 ")
+    const uppercase = (val: string) => val.toUpperCase()
+    const topifySpaces = (val: string) => val.replace(/ /g, " 👌 ")
 
     const actual = pipe(
       initialValue,
