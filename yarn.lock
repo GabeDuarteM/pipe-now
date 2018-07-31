@@ -2236,9 +2236,9 @@ gauge@~2.7.3:
     strip-ansi "^3.0.1"
     wide-align "^1.1.0"
 
-gd-scripts@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/gd-scripts/-/gd-scripts-1.0.1.tgz#373e0949fa1dab1479afea43fc6a1a869137f23e"
+gd-scripts@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/gd-scripts/-/gd-scripts-1.0.2.tgz#3becbedf5dfb812e5472d2f02411dc295404fae2"
   dependencies:
     "@babel/cli" "^7.0.0-beta.55"
     "@babel/core" "^7.0.0-beta.55"
