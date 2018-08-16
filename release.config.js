@@ -1,1 +1,1 @@
-module.exports = require("gd-scripts/build/config/releaserc")
+module.exports = require("gd-scripts/semver")
