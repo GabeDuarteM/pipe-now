@@ -41,7 +41,7 @@
     "babel-core": "^7.0.0-bridge.0"
   },
   "devDependencies": {
-    "@types/jest": "^23.3.1",
+    "@types/jest": "^23.3.2",
     "@types/node": "^10.9.2",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^2.6.2",
