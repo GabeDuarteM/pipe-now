@@ -47,6 +47,6 @@
     "eslint-plugin-prettier": "^2.6.2",
     "gd-scripts": "^1.3.0",
     "prettier": "^1.14.2",
-    "semantic-release": "^15.9.8"
+    "semantic-release": "^15.9.16"
   }
 }
