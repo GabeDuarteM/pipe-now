@@ -45,7 +45,7 @@
     "@types/node": "^10.9.2",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^2.6.2",
-    "gd-scripts": "^1.3.0",
+    "gd-scripts": "^3.1.4",
     "prettier": "^1.14.2",
     "semantic-release": "^15.9.8"
   }
