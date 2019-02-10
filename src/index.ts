@@ -1,4 +1,4 @@
-const pipe = <T>(initialValue: T, ...args: any[]) => {
+const pipe = <T>(initialValue: T, ...args: any[]): any => {
   const finalValue = args.reduce((value, func) => {
     const nextValue = func(value)
 
