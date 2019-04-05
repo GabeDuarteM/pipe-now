@@ -40,19 +40,59 @@ describe('pipe', () => {
     expect(actual).toBe(expected)
   })
 
-  it('should return "GLORY 👌 TO 👌 THE 👌 PIPES" when the following parameters are passed: ("glory to the pipes", topifySpaces, uppercase) ', () => {
-    const initialValue = 'glory to the pipes'
-    const expected = 'GLORY 👌 TO 👌 THE 👌 PIPES'
+  it('should return "PIPES 👌 ARE 👌 AWESOME"', () => {
+    const initialValue = 'pipes are awesome'
+    const expected = 'PIPES 👌 ARE 👌 AWESOME'
 
     const uppercase = (val: string): string => val.toUpperCase()
-    const topifySpaces = (val: string): string => val.replace(/ /g, ' 👌 ')
+    const emojifySpaces = (val: string): string => val.replace(/ /g, ' 👌 ')
 
     const actual = pipe(
       initialValue,
-      topifySpaces,
+      emojifySpaces,
       uppercase,
     )
 
     expect(actual).toBe(expected)
+  })
+
+  it('should correctly calculate the height average of the people', async () => {
+    function fetchPeople(): Promise<any> {
+      return Promise.resolve({
+        count: 3,
+        results: [
+          {
+            name: 'Luke Skywalker',
+            height: '172',
+          },
+          {
+            name: 'C-3PO',
+            height: '167',
+          },
+          {
+            name: 'Darth Vader',
+            height: '202',
+          },
+        ],
+      })
+    }
+
+    function average(arr: number[]): number {
+      const sum = arr.reduce((a, b) => a + b)
+      const avg = sum / arr.length
+
+      return avg
+    }
+
+    const peopleHeightAverage = pipe(
+      await fetchPeople(),
+      (values) => values.results,
+      (values) => values.map((people) => people.height),
+      (values) => values.map(Number),
+      average,
+      Math.round,
+    )
+
+    expect(peopleHeightAverage).toBe(180)
   })
 })
