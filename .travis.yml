@@ -4,6 +4,7 @@ node_js:
   - node
   - lts/*
 script: yarn ci
+after_success: yarn codecov
 jobs:
   include:
     - stage: semantic-release
