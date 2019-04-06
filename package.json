@@ -40,7 +40,7 @@
   "devDependencies": {
     "@types/jest": "24.0.5",
     "@types/node": "10.12.24",
-    "gd-scripts": "4.0.0",
+    "gd-scripts": "5.0.3",
     "semantic-release": "15.13.3"
   }
 }
