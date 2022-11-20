@@ -41,7 +41,7 @@
     "@types/jest": "24.0.11",
     "@types/node": "11.13.9",
     "codecov": "3.3.0",
-    "gd-scripts": "5.0.3",
+    "gd-scripts": "6.0.2",
     "semantic-release": "15.13.3"
   }
 }
